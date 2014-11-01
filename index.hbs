@@ -1,0 +1,19 @@
+{{!< default}}
+
+{{#foreach posts}}
+
+  <article class="article {{post_class}}">
+    <h1 class="article-title smooth-link">
+      <a href="{{url}}">{{{title}}}</a>
+    </h1>
+
+    <footer class="article-meta">
+      <time class="article-date" datetime="{{date format="YYYY-MM-DD"}}">
+        {{date format='DD MMMM, YYYY'}}
+      </time>
+    </footer>
+  </article>
+
+{{/foreach}}
+
+{{pagination}}
