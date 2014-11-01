@@ -175,7 +175,7 @@ em:after {
 }
 
 .article .article-title.article-title-gmd:after {
-  content: '=====================';
+  content: '=======================================================================================';
   overflow: hidden;
   position: absolute;
   word-break: break-all;
