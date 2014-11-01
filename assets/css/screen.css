@@ -15,7 +15,8 @@
  * Darker Gray    · rgb(153, 153, 153)
  * Darkest Gray   · rgb(85, 85, 85)
  * Lighter Green  · rgb(174, 224, 200)
- * Darker Green   · rgb(129, 206, 167)
+ * Darker Green   · rgb(119, 204, 164)
+ * Darkest Green  · rgb(94, 179, 139)
  *
  * Miscelleneous
  * =============
@@ -59,7 +60,7 @@ body {
 }
 
 a {
-  color: rgb(129, 206, 167);
+  color: rgb(94, 179, 139);
   text-decoration: none;
 }
 
@@ -125,7 +126,7 @@ var {
 kbd,
 samp,
 var {
-  color: rgb(129, 206, 167);
+  color: rgb(94, 179, 139);
   white-space: nowrap;
 }
 
@@ -469,7 +470,7 @@ footer {
 
 .smooth-link,
 .smooth-link a {
-  color: #555;
+  color: #444;
   display: inline-block;
   text-decoration: none;
   transition: all .25s ease .25s;
@@ -477,7 +478,7 @@ footer {
 
 .smooth-link:hover,
 .smooth-link:hover a {
-  color: rgb(129, 206, 167);
+  color: rgb(94, 179, 139);
   text-decoration: none;
   transition: all .15s ease 0s;
 }
