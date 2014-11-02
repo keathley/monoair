@@ -170,6 +170,15 @@ em:after {
   content: ']';
 }
 
+.article-content a[href$=png]:before,
+.article-content a[href$=png]:after,
+.article-content a[href$=jpg]:before,
+.article-content a[href$=jpg]:after,
+.article-content a[href$=gif]:before,
+.article-content a[href$=gif]:after {
+  content: '';
+}
+
 .article h1:before,
 .article h2:before,
 .article h3:before,
