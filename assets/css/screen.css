@@ -64,10 +64,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 b,
 b a,
 strong,
@@ -425,6 +421,10 @@ footer {
 .article-content a {
   color: #111;
   text-decoration: underline;
+}
+
+.article-content a:visited {
+  color: #555;
 }
 
 
