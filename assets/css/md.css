@@ -56,7 +56,7 @@
 .style-md a[href$=jpg]:after,
 .style-md a[href$=gif]:before,
 .style-md a[href$=gif]:after {
-  content: '';
+  content: none;
 }
 
 .style-md h1,
@@ -135,12 +135,9 @@
   content: '`';
 }
 
-.style-md pre code:before {
-  content: '';
-}
-
+.style-md pre code:before,
 .style-md pre code:after {
-  content: '';
+  content: none;
 }
 
 .style-md pre {
