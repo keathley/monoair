@@ -1,0 +1,101 @@
+/**
+ * Monoair Theme for Ghost
+ *
+ * Monoair uses the Solarized color palette.
+ *
+ * @author  L. Daniel Nordstrom <d@mrnordstrom.com>
+ * @version 0.1.0
+ * @license MPL 2.0
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+/** Body text */
+
+body,
+.home-template .article-title:hover,
+.home-template .article-title:hover a,
+.home-template .article-title:hover a:visited {
+  color: rgb(70, 91, 98);
+}
+
+/** Text selection */
+
+::selection {
+  background: rgb(199, 27, 111);
+  color: white;
+}
+
+::-moz-selection {
+  background: rgb(199, 27, 111);
+  color: white;
+}
+
+/** All links */
+
+a,
+.header-title a:hover {
+  color: rgb(32, 118, 200);
+}
+
+a:visited {
+  color: rgb(89, 89, 183);
+}
+
+/** Article links */
+
+.article-content a {
+  color: rgb(4, 32, 40);
+  text-decoration: underline;
+}
+
+/** Header links */
+
+.header-title a,
+.header-navigation a:hover {
+  color: rgb(70, 91, 98);
+}
+
+/** Header */
+
+.header-link:not(:last-of-type):after,
+.header-title .header-link:after {
+  color: rgb(233, 233, 233);
+}
+
+/** Headings */
+
+h1 {
+  color: inherit;
+}
+
+.home-template .article-title,
+.home-template .article-title a,
+.home-template .article-title a:visited,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(37, 146, 134);
+}
+
+/** Code */
+
+:not(pre) > code,
+kbd,
+samp,
+var {
+  background: rgb(253, 245, 221);
+}
+
+/** Meta */
+
+.header-bio,
+.article-meta,
+.pagination {
+  color: rgb(129, 144, 144);
+}
+

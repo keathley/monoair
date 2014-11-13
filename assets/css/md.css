@@ -1,0 +1,255 @@
+/**
+ * Formats HTML content as Markdown.
+ *
+ * Toggle Markdown formatting using the `style-md` class. Add
+ * `style-md-githubheading` for GitHub Flavored Markdown.
+ *
+ * @author  L. Daniel Nordstrom <d@mrnordstrom.com>
+ * @version 0.1.0
+ * @license MPL 2.0
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+/**
+ * Markdown
+ */
+
+.style-md *:before,
+.style-md *:after {
+  cursor: default;
+}
+
+.style-md b:before,
+.style-md b:after,
+.style-md strong:before,
+.style-md strong:after {
+  content: '**';
+}
+
+.style-md i:before,
+.style-md i:after,
+.style-md em:before,
+.style-md em:after  {
+  content: '*';
+}
+
+.style-md a:before,
+.style-md a:after {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.style-md a:before {
+  content: '[';
+}
+
+.style-md a:after {
+  content: ']';
+}
+
+.style-md a[href$=png]:before,
+.style-md a[href$=png]:after,
+.style-md a[href$=jpg]:before,
+.style-md a[href$=jpg]:after,
+.style-md a[href$=gif]:before,
+.style-md a[href$=gif]:after {
+  content: '';
+}
+
+.style-md h1,
+.style-md h2,
+.style-md h3,
+.style-md h4,
+.style-md h5,
+.style-md h6 {
+  position: relative;
+}
+
+.style-md h1:before,
+.style-md h2:before,
+.style-md h3:before,
+.style-md h4:before,
+.style-md h5:before,
+.style-md h6:before {
+  margin-right: 100%;
+  position: absolute;
+  right: 0.5em;
+  top: 0;
+}
+
+.style-md h1:before {
+  content: '#';
+}
+
+.style-md h2:before {
+  content: '##';
+}
+
+.style-md h3:before {
+  content: '###';
+}
+
+.style-md h4:before {
+  content: '####';
+}
+
+.style-md h5:before {
+  content: '#####';
+}
+
+.style-md h6:before {
+  content: '######';
+}
+
+.style-md ul,
+.style-md ol,
+.style-md li,
+.style-md pre,
+.style-md blockquote {
+  position: relative;
+}
+
+.style-md blockquote:before {
+  position: absolute;
+  top: 0;
+  left: -1.25em;
+  bottom: 0;
+  overflow: hidden;
+  white-space: pre;
+  content: ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A";
+}
+
+.style-md :not(pre) > code,
+.style-md kbd,
+.style-md samp,
+.style-md var {
+  padding: 3px 1px;
+  white-space: nowrap;
+}
+
+.style-md code:before,
+.style-md code:after {
+  content: '`';
+}
+
+.style-md pre code:before {
+  content: '';
+}
+
+.style-md pre code:after {
+  content: '';
+}
+
+.style-md pre {
+  overflow: auto;
+  padding: 0 0 0 2.2em;
+}
+
+.style-md ul {
+  list-style-type: none;
+}
+
+.style-md ul li:before {
+  content: "–";
+  margin-right: 100%;
+  position: absolute;
+  right: .9em;
+  top: 0;
+}
+
+.style-md ul ul,
+.style-md ul ol,
+.style-md ol ol,
+.style-md ol ul {
+  margin-bottom: 0;
+}
+
+.style-md ul ul li:before {
+  content: "– –";
+  white-space: nowrap;
+}
+
+.style-md dt {
+  font-weight: 700;
+}
+
+.style-md hr {
+  border: none;
+  color: inherit;
+  text-align: center;
+}
+
+.style-md hr:before {
+  content: '* * *';
+}
+
+
+
+/**
+ * Options
+ */
+
+.style-md-nobrackets a:before,
+.style-md-nobrackets a:after,
+a.style-md-nobrackets:before,
+a.style-md-nobrackets:after {
+  display: none;
+}
+
+.style-md-codebackticks pre,
+pre.style-md-codebackticks {
+  margin-left: 0;
+}
+
+.style-md-codebackticks pre:before,
+pre.style-md-codebackticks:before {
+  content: '```\A';
+}
+
+.style-md-codebackticks pre:after,
+pre.style-md-codebackticks:after {
+  content: '```';
+}
+
+.style-md-githubheadings h1,
+.style-md-githubheadings h2,
+h1.style-md-githubheadings,
+h2.style-md-githubheadings {
+  display: table;
+  margin: 3em auto 1.5em;
+  overflow: hidden;
+  padding-bottom: 1.5em;
+}
+
+.style-md-githubheadings h1:after,
+.style-md-githubheadings h2:after,
+h1.style-md-githubheadings:after,
+h2.style-md-githubheadings:after {
+  overflow: hidden;
+  position: absolute;
+  word-break: break-all;
+  width: 100%;
+  height: 1.5em;
+  bottom: 0;
+  left: 0;
+}
+
+.style-md-githubheadings h1:after,
+h1.style-md-githubheadings:after {
+  content: '=======================================================================================';
+}
+
+.style-md-githubheadings h2:after,
+h2.style-md-githubheadings:after {
+  content: '---------------------------------------------------------------------------------------';
+}
+
+.style-md-githubheadings h1:before,
+.style-md-githubheadings h2:before,
+h1.style-md-githubheadings:before,
+h2.style-md-githubheadings:before {
+  display: none;
+}

@@ -1,31 +1,21 @@
 /**
- * Monoair styles, with its color palette based on the fantastic
- * Scope theme for Tumblr. Largely inspired by the Monospace theme
- * for Tumblr.
+ * Monoair Theme for Ghost
+ *
+ * Inspired by the Monospace theme for Tumblr.
  *
  * Links
- * =====
+ * -----
  * Scope for Tumblr     · <http://wildemedia-scope.tumblr.com/>
  * Monospace for Tumblr · <http://monospace-theme.tumblr.com/>
  *
- * Color Palette
- * =============
- * White          · rgb(255, 255, 255)
- * Lighter Gray   · rgb(221, 221, 221)
- * Darker Gray    · rgb(153, 153, 153)
- * Darkest Gray   · rgb(85, 85, 85)
- * Lighter Green  · rgb(174, 224, 200)
- * Darker Green   · rgb(119, 204, 164)
- * Darkest Green  · rgb(94, 179, 139)
- *
- * Miscelleneous
- * =============
- * Transition In  · all .15s ease 0s
- * Transition Out · all .25s ease .25s
+ * Transitions
+ * -----------
+ * In  · all .15s ease 0s
+ * Out · all .25s ease .25s
  */
 
 /**
- * General Styling
+ * General
  */
 
 *,
@@ -36,31 +26,76 @@
   box-sizing: border-box;
 }
 
-*:before,
-*:after {
-  cursor: default;
-}
-
 body {
-  color: #444;
-  font-family: "Ubuntu Mono", monospace;;
+  font-family: "Ubuntu Mono", Inconsolata, "Fira Mono", "Source Code Pro", monospace;
   font-size: 16px;
   font-size: 1rem;
-  font-weight: 300;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   -o-hyphens: auto;
   hyphens: auto;
-  line-height: 1.6;
+  line-height: 1.5;
   margin: 0;
   orphans: 4;
-  padding: 0;
   widows: 4;
 }
 
+
+
+/**
+ * Typographic Baseline
+ */
+
+p:not(:last-child),
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl {
+  margin: 0 0 24px;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+hr {
+  margin: 72px 0 0;
+  margin: 4.5rem 0 0;
+  height: 72px;
+  height: 4.5rem;
+}
+
+blockquote {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+blockquote,
+pre,
+dd {
+  margin: 48px 0 72px;
+  margin: 3rem 0 4.5rem;
+}
+
+small,
+.small {
+  font-size: 14px;
+  font-size: .875rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+}
+
+
+
+/**
+ * Typographic Style
+ */
+
 a {
-  color: rgb(94, 179, 139);
   text-decoration: none;
 }
 
@@ -77,37 +112,15 @@ h3,
 h4,
 h5,
 h6 {
-  color: #81CEA7;
   font-size: inherit;
-  margin: 1.6em 0 1em;
-  position: relative;
-}
-
-h1 {
-  color: inherit;
-}
-
-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
 }
 
 blockquote {
-  font-size: 22px;
-  font-size: 1.375rem;
   font-style: italic;
-  position: relative;
 }
 
 blockquote cite {
   font-style: normal;
-}
-
-small,
-.small {
-  font-size: 14px;
-  font-size: .875rem;
 }
 
 pre,
@@ -122,218 +135,11 @@ var {
 kbd,
 samp,
 var {
-  color: rgb(94, 179, 139);
+
   white-space: nowrap;
 }
 
 
-
-/**
- * Markdown Styling
- */
-
-b:before,
-strong:before {
-  content: '**';
-}
-
-b:after,
-strong:after {
-  content: '**';
-}
-
-i:before,
-em:before {
-  content: '*';
-}
-
-i:after,
-em:after {
-  content: '*';
-}
-
-.article-content a:before,
-.article-content a:after,
-.article-meta a:before,
-.article-meta a:after {
-  display: inline-block;
-  text-decoration: none;
-}
-
-.article-content a:before,
-.article-meta a:before {
-  content: '[';
-}
-
-.article-content a:after,
-.article-meta a:after {
-  content: ']';
-}
-
-.article-content a[href$=png]:before,
-.article-content a[href$=png]:after,
-.article-content a[href$=jpg]:before,
-.article-content a[href$=jpg]:after,
-.article-content a[href$=gif]:before,
-.article-content a[href$=gif]:after {
-  content: '';
-}
-
-.article h1:before,
-.article h2:before,
-.article h3:before,
-.article h4:before,
-.article h5:before,
-.article h6:before {
-  margin-right: 100%;
-  position: absolute;
-  right: 0.5em;
-  top: 0;
-}
-
-.article .article-title.article-title-gmd {
-  display: table;
-  margin: 0 auto 2em;
-  overflow: hidden;
-  padding-bottom: 1.2em;
-}
-
-.article .article-title.article-title-gmd:after {
-  content: '=======================================================================================';
-  overflow: hidden;
-  position: absolute;
-  word-break: break-all;
-  width: 100%;
-  height: 1.2em;
-  bottom: 0;
-  left: 0;
-}
-
-
-.article .article-title.article-title-gmd:before {
-  display: none;
-}
-
-.article h1:before {
-  content: '#';
-}
-
-.article h2:before {
-  content: '##';
-}
-
-.article h3:before {
-  content: '###';
-}
-
-.article h4:before {
-  content: '####';
-}
-
-.article h5:before {
-  content: '#####';
-}
-
-.article h6:before {
-  content: '######';
-}
-
-blockquote:before {
-  position: absolute;
-  top: 0;
-  left: -1.25em;
-  bottom: 0;
-  overflow: hidden;
-  white-space: pre;
-  content: ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A";
-}
-
-code:before,
-code:after {
-  content: '`';
-}
-
-pre code:before {
-  content: '```\A';
-}
-
-pre code:after {
-  content: '```';
-}
-
-pre code {
-  white-space: pre;
-}
-
-pre {
-  overflow: auto;
-}
-
-p {
-  margin: 0 0 1.5625em;
-}
-
-p:last-child {
-  margin: 0;
-}
-
-ul,
-ol,
-dl {
-  margin: 0 0 2em;
-  padding: 0;
-}
-
-ul {
-  list-style-type: none;
-}
-
-li {
-  margin-bottom: .35em;
-  position: relative;
-}
-
-ul li:before {
-  content: "–";
-  margin-right: 100%;
-  position: absolute;
-  right: .9em;
-  top: 0;
-}
-
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin-bottom: 0;
-  margin-top: .2em;
-}
-
-ul ul li:before {
-  content: "– –";
-  white-space: nowrap;
-}
-
-dt {
-  font-weight: 700;
-}
-
-blockquote,
-pre,
-dd {
-  margin: 2.8em 0 3em;
-}
-
-hr {
-  border: none;
-  color: inherit;
-  margin: 4em 0;
-  text-align: center;
-}
-
-hr:before {
-  content: '* * * * * *';
-}
 
 /**
  * Layout
@@ -346,14 +152,22 @@ footer {
   display: block;
 }
 
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
 .content {
-  margin: 0 auto 160px;
+  margin: 72px auto;
+  margin: 72px auto;
   width: 100%;
   max-width: 50em;
 }
 
 .home-template .article-title {
-  margin: 2em 0px 0.3em;
+  margin: 48px 0 0;
+  margin: 3rem 0 0;
 }
 
 
@@ -363,8 +177,8 @@ footer {
  */
 
 .header {
-  padding: 1em;
-  margin: 35px 0 75px;
+  margin: 48px 0;
+  margin: 3rem 0;
   text-align: center;
 }
 
@@ -383,22 +197,12 @@ footer {
 
 .header-link:not(:last-of-type):after,
 .header-title .header-link:after {
-  color: #DDDDDD;
   content: '/';
   display: inline-block;
-  margin: 0 4px 0 10px;
-}
-
-.header-navigation .smooth-link {
-  color: #81CEA7;
-}
-
-.header-navigation .smooth-link:hover {
-  color: #444;
+  padding: 0 0.2em 0 0.8em;
 }
 
 .header-bio {
-  color: #bbb;
   margin: 1.5em auto;
   max-width: 46em;
   width: 90%;
@@ -419,21 +223,11 @@ footer {
 }
 
 .article-meta {
-  color: #bbb;
   margin: 1.5625em 0px 2em;
 }
 
 .home-template .article-meta {
   margin: 0;
-}
-
-.article-content a {
-  color: #111;
-  text-decoration: underline;
-}
-
-.article-content a:visited {
-  color: #555;
 }
 
 
@@ -461,7 +255,6 @@ footer {
  */
 
 .pagination {
-  color: #bbb;
   margin: 8em 1em 0;
   text-align: center;
 }
@@ -479,7 +272,6 @@ footer {
 
 .smooth-link,
 .smooth-link a {
-  color: #444;
   display: inline-block;
   text-decoration: none;
   transition: all .25s ease .25s;
@@ -487,7 +279,6 @@ footer {
 
 .smooth-link:hover,
 .smooth-link:hover a {
-  color: rgb(94, 179, 139);
   text-decoration: none;
   transition: all .15s ease 0s;
 }
