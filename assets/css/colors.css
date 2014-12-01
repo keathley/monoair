@@ -15,6 +15,7 @@
 /** Body text */
 
 body,
+a:hover,
 .home-template .article-title:hover,
 .home-template .article-title:hover a,
 .home-template .article-title:hover a:visited {
@@ -25,12 +26,12 @@ body,
 
 ::selection {
   background: rgb(199, 27, 111);
-  color: white;
+  color: #fff;
 }
 
 ::-moz-selection {
   background: rgb(199, 27, 111);
-  color: white;
+  color: #fff;
 }
 
 /** All links */
@@ -78,7 +79,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+blockquote cite {
   color: rgb(37, 146, 134);
 }
 
@@ -95,7 +97,8 @@ var {
 
 .header-bio,
 .article-meta,
-.pagination {
+.pagination,
+blockquote cite {
   color: rgb(129, 144, 144);
 }
 

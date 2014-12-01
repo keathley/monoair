@@ -119,10 +119,6 @@ blockquote {
   font-style: italic;
 }
 
-blockquote cite {
-  font-style: normal;
-}
-
 pre,
 code,
 kbd,
@@ -272,14 +268,11 @@ img {
 
 .smooth-link,
 .smooth-link a {
-  display: inline-block;
-  text-decoration: none;
   transition: all .25s ease .25s;
 }
 
 .smooth-link:hover,
 .smooth-link:hover a {
-  text-decoration: none;
   transition: all .15s ease 0s;
 }
 
