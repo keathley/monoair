@@ -122,7 +122,7 @@ blockquote {
 }
 
 blockquote cite::before {
-  content: ' \2014 ';
+  content: '\2014\a0';
 }
 
 pre,
