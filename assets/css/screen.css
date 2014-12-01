@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /**
  * Monoair Theme for Ghost
  *
@@ -119,6 +121,10 @@ blockquote {
   font-style: italic;
 }
 
+blockquote cite {
+  content: ' \2014 ';
+}
+
 pre,
 code,
 kbd,
@@ -131,7 +137,6 @@ var {
 kbd,
 samp,
 var {
-
   white-space: nowrap;
 }
 
